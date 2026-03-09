@@ -1,0 +1,28 @@
+[Unit]
+Description=GoodbyeDPI Turkey - Linux DPI Bypass
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStartPre=/usr/local/sbin/goodbyedpi-nft-load.sh
+ExecStart=/home/white/goodbyedpi-linux/bin/goodbyedpi \
+    --fragment-size 5 \
+    --set-ttl 5 \
+    --dns-addr 77.88.8.8 \
+    --dns-port 1253 \
+    --dnsv6-addr 2a02:6b8::feed:0ff \
+    --dnsv6-port 1253 \
+    --queue-num 0
+ExecStopPost=-/usr/sbin/nft delete table inet goodbyedpi
+Restart=on-failure
+RestartSec=5
+User=root
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_RAW
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_RAW
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=goodbyedpi
+
+[Install]
+WantedBy=multi-user.target

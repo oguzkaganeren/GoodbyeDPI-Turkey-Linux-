@@ -1,0 +1,22 @@
+# Build artifacts
+src/*.o
+bin/goodbyedpi
+goodbyedpi
+
+# Debug build
+src/*.d
+
+# Logs
+/tmp/goodbyedpi-nft.log
+*.log
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
