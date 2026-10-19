@@ -43,11 +43,11 @@ sudo pacman -S libnetfilter_queue nftables gcc make
 
 ### Yöntem 1: Release'den Binary İndir (Derleme gerekmez)
 
-1. [Releases](https://github.com/salihkahveci090/GoodbyeDPI-Turkey-Linux-/releases) sayfasından `goodbyedpi-linux-x86_64` dosyasını indirin
+1. [Releases](https://github.com/oguzkaganeren/GoodbyeDPI-Turkey-Linux-/releases) sayfasından `goodbyedpi-linux-x86_64` dosyasını indirin
 2. Repoyu clone'layın ve binary'yi yerleştirin:
 
 ```bash
-git clone https://github.com/salihkahveci090/GoodbyeDPI-Turkey-Linux-
+git clone https://github.com/oguzkaganeren/GoodbyeDPI-Turkey-Linux-
 cd GoodbyeDPI-Turkey-Linux-
 mkdir -p bin
 mv ~/Downloads/goodbyedpi-linux-x86_64 bin/goodbyedpi
@@ -59,7 +59,7 @@ sudo bash service_install_dnsredir_turkey.sh
 
 ```bash
 sudo pacman -S libnetfilter_queue gcc make
-git clone https://github.com/salihkahveci090/GoodbyeDPI-Turkey-Linux-
+git clone https://github.com/oguzkaganeren/GoodbyeDPI-Turkey-Linux-
 cd GoodbyeDPI-Turkey-Linux-
 make
 sudo bash service_install_dnsredir_turkey.sh
